@@ -20,7 +20,7 @@ class Hiberlite < Formula
     end
   end
 
-  def pc_file; <<-EOS.undent
+  def pc_file; <<~EOS
     prefix=#{prefix}
     exec_prefix=${prefix}
     libdir=${exec_prefix}/lib
@@ -38,7 +38,7 @@ class Hiberlite < Formula
   end
 
   test do
-    (testpath/"test.cpp").write <<-EOS.undent
+    (testpath/"test.cpp").write <<~EOS
       #include "hiberlite/hiberlite.h"
       int main() {
           hiberlite::Database db("test.db");
